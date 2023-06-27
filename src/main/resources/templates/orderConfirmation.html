@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <div>
+            Order Id:
+            <br>
+            <span th:text="${orders.orderId}"></span>
+        </div>
+        <hr>
+        Order Details:
+        <br>
+        <div th:each="od : ${orderDetailsList}">
+            <p>
+                Product:
+                <br>
+                <span th:text="${od.product}"></span>        
+            </p>
+            <br>
+            <p>
+                Unit Price:
+                <br>
+                <span th:text="${od.unitPrice}"></span>        
+            </p>
+            <br>
+            <p>
+                Quantity:
+                <br>
+                <span th:text="${od.quantity}"></span>        
+            </p>
+            <br>
+            <br>
+        </div>
+        <button th:href="@{/}">Home</button>
+    </body>
+</html>

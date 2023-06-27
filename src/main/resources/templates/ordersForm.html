@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="#" method="POST" th:object="${orders}" th:action="@{/api/orders}">
+            <div>
+                Customer Name:
+                <br>
+                <input type="text" th:field="*{customerName}">
+            </div>
+            <br>
+            <div>
+                Shipping Address:
+                <br>
+                <input type="text" th:field="*{shipAddress}">
+            </div>
+            <br>
+            <div>
+                Notes:
+                <br>
+                <input type="text" th:field="*{notes}">
+            </div>
+            <br>
+            <div>
+                Tax:
+                <br>
+                <input type="text" th:field="*{tax}">
+            </div>
+            <br>
+            <button type="submit">To Order Details</button>
+        </form>
+    </body>
+</html>

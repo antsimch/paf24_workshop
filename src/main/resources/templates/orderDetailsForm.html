@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="#" method="POST" th:action="@{/api/orders/details}" th:object="${orderDetails}">
+            <div>
+                Product:
+                <br>
+                <input type="text" th:field="*{product}">
+            </div>
+            <br>
+            <div>
+                Unit Price:
+                <br>
+                <input type="text" th:field="*{unitPrice}">
+            </div>
+            <br>
+            <div>
+                Discount:
+                <br>
+                <input type="text" th:field="*{discount}">
+            </div>
+            <br>
+            <div>
+                Quantity:
+                <br>
+                <input type="text" th:field="*{quantity}">
+            </div>
+            <br>
+            <button type="submit">Next Product</button>
+        </form>
+        <form action="#" method="GET" th:action="@{/api/orders/create}">
+            <button type="submit">Create Order</button>
+        </form>
+    </body>
+</html>
